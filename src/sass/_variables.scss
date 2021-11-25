@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+// COLORS
+$dark-blue: hsl(209, 23%, 22%);
+$very-dark: hsl(207, 26%, 17%);
+$very-dark: hsl(200, 15%, 8%);
+$dark-gray: hsl(0, 0%, 52%);
+$very-light: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: rgb(0, 0, 0);
+
+// SHADOW
+$light-shadow: 4px 4px 4px rgba(133, 133, 133, 0.1);
+
+// FONTS WEIGHT
+$font-weight-light: 300;
+$font-weight-medium: 600;
+$font-weight-strong: 800;
+
+// FONTS SIZE
+$font-primary: 'Nunito Sans', sans-serif;
+$font-size-homepage: 14px;
+$font-size-detail: 16px;
+
+// RESPONSIVE BREAKPOINT
+$bp-large: 90em; // 1440px
+$bp-medium: 48em; // 900px
+$bp-small: 23.5em; // 375px

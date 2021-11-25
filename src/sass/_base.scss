@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $very-light;
+    font-family: $font-primary;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-homepage;
+    color: $very-dark;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $very-dark;
+}

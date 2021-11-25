@@ -1,0 +1,11 @@
+.directory-menu {
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-rows: 40vh 40vh;
+    row-gap: 5vh;
+    column-gap: 2.5rem;
+    flex-direction: column;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding-top: 20rem;
+}

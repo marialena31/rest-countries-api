@@ -1,0 +1,14 @@
+@import '../../sass/variables';
+
+.header {
+    background-color: $white;
+    box-shadow: $light-shadow;
+    padding: 2rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__change-mode__icon {
+        padding-right: 0.5rem;
+    }
+}
