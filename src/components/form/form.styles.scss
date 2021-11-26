@@ -1,0 +1,74 @@
+@import '../../sass/variables';
+
+.search-form {
+    position:relative;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 3rem;
+       flex-direction: column;
+       align-items: center;
+    }
+
+    &__input-search {
+        padding-left: 80px;
+        width: 400px;
+        height: 50px;
+        border: none;
+        box-shadow: $light-shadow;
+        border-radius: 5px;
+        outline: none;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding-left: 50px;
+            margin: auto;
+            width: 100%;
+            margin-bottom: 2rem;;
+         }
+    }
+   
+    &__select-region {
+        padding-left: 2rem;
+        background-color: $white;
+        width: 200px;
+        height: 50px;
+        border: none;
+        box-shadow: $light-shadow;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    &__search-icon {
+        justify-self: flex-start;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        
+        &__btn {
+            position: absolute;
+            width: 80px;
+            height: 50px;
+            background-color: transparent;
+            color: transparent;
+            border: none;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        &__glass {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            text-align: center;
+            color: $dark-gray;
+            z-index: 1;
+            cursor: pointer;
+        }
+    }
+}

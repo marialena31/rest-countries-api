@@ -4,8 +4,12 @@
     background-color: $white;
     height: 400px;
     width: auto;
+    box-shadow: $light-shadow;
+    border-radius: 5px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .background-image {
@@ -27,4 +31,13 @@
 
 .info {
     padding: 0.5rem 0;
+}
+
+.info > span {
+    font-weight: $font-weight-strong;
+    margin-right: 0.5rem;
+}
+
+.code {
+    display: none;
 }

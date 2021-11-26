@@ -1,11 +1,19 @@
+@import '../../sass/variables';
+
 .directory-menu {
     display: grid;
-    grid-template-columns: 20vw 20vw 20vw 20vw;
-    grid-template-rows: 40vh 40vh;
-    row-gap: 5vh;
-    column-gap: 2.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-rows: 40rem;
+    row-gap: 8rem;
+    column-gap: 8rem;
     flex-direction: column;
-    margin-left: 10rem;
-    margin-right: 10rem;
-    padding-top: 20rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding-top: 5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-top: 3rem;
+     }
 }

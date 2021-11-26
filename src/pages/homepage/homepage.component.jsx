@@ -1,18 +1,16 @@
 import React from "react";
 import Directory from "../../components/directory/directory.components";
+import Form from "../../components/form/form.component";
 
 import './homepage.styles.scss';
 
-const HomePage = () => (
-    <div className='homepage'>
-        {/* <Search/>
-        <Filter/> */}
-        <form>
-        <input name="search" className="search" type="text" value="" placeholder="Search for a country"></input>
-        <select></select>
-        </form>
-        <Directory/>
-    </div>
-);
+const HomePage = () => {
+    return (
+        <div className='homepage'>
+            <Form/>
+            <Directory/>
+        </div>
+    )
+};
 
 export default HomePage;

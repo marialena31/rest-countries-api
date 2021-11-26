@@ -1,12 +1,12 @@
 import React, {useState, useEffect}  from "react";
 import MenuItem from "../menu-item/menu-item.component";
-// import { MyApiRestCountries } from "../../api/api.utils";
 
 import './directory.styles.scss';
+
 const Directory = () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [items, setItems] = useState([]);
+    const [countries, setCountries] = useState([]);
 
     useEffect(() => {
       fetch("https://restcountries.com/v2/all")
@@ -14,7 +14,7 @@ const Directory = () => {
         .then(
           (result) => {
             setIsLoaded(true);
-            setItems(result);
+            setCountries(result);
           },
  
           (error) => {
@@ -31,7 +31,7 @@ const Directory = () => {
 } else {
   return (
         <div className='directory-menu'>
-            {items.map(item => (<MenuItem key={item.name} country={item}/>))}
+            {countries.map(country => (<MenuItem key={country.alpha3Code} country={country}/>))}
         </div>
     
 )}

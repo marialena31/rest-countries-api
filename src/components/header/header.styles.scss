@@ -3,12 +3,35 @@
 .header {
     background-color: $white;
     box-shadow: $light-shadow;
-    padding: 2rem 10rem;
+    padding: 2rem 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    @media only screen and (max-width: $bp-small) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 3rem;
+        font-size: 70%;
+     }
+
+     &__change-mode {
+         cursor: pointer;
+
+         & .dark ~ .header {
+            background-color: $dark-blue;
+         }
+
+         & .dark ~ .body {
+            background-color: $very-dark-background;
+         }
+         &__title {
+              cursor: pointer;
+         }
+     }
+
     &__change-mode__icon {
+        cursor: pointer;
         padding-right: 0.5rem;
     }
 }
