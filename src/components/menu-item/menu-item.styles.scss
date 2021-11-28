@@ -1,7 +1,7 @@
 @import '../../sass/variables';
 
 .menu-item {
-    background-color: $white;
+    background-color: var(--color-elements);
     height: 400px;
     width: auto;
     box-shadow: $light-shadow;

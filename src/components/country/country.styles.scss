@@ -13,6 +13,7 @@
      }
 
     &__btn {
+        background-color: var(--color-elements);
         height: 40px;
         width: 120px;
         padding: 0.7rem 2.5rem;
@@ -28,6 +29,7 @@
     }
 
     &__card {
+        height: 100vh;
         margin-top: 5rem;
         display: grid;
         grid-template-columns: 40% 50%;
@@ -114,9 +116,11 @@
 
                 &__item {
                     &__box {
+                        background-color: var(--color-elements);
                         display: inline-block;
                         height: 30px;
                         padding: 0.5rem 2rem;
+                        margin-left: 2rem;;
                         box-shadow: $light-shadow-4;
                         border-radius: 5px;
 

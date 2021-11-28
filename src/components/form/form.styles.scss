@@ -17,6 +17,7 @@
     }
 
     &__input-search {
+        background-color: var(--color-elements);
         padding-left: 80px;
         width: 400px;
         height: 50px;
@@ -24,6 +25,10 @@
         box-shadow: $light-shadow;
         border-radius: 5px;
         outline: none;
+
+        &::placeholder {
+            color: var(--color-input);
+          }
 
         @media only screen and (max-width: $bp-medium) {
             padding-left: 50px;
@@ -35,7 +40,8 @@
    
     &__select-region {
         padding-left: 2rem;
-        background-color: $white;
+        background-color: var(--color-elements);
+        color: var(--color-input);
         width: 200px;
         height: 50px;
         border: none;
@@ -66,7 +72,7 @@
             top: 20px;
             left: 30px;
             text-align: center;
-            color: $dark-gray;
+            color: var(--color-input);
             z-index: 1;
             cursor: pointer;
         }

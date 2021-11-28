@@ -3,13 +3,9 @@ import { withRouter } from 'react-router-dom';
 
 import './menu-item.styles.scss';
 
-const MenuItem = ({country, history, match}) => {
-    // const displayCountryPage = () {
-
-    // }
-
+const MenuItem = ({country, history, match, theme}) => {
     return (
-        <div className='menu-item' onClick={() => history.push(`${match.url}country?code=${country.alpha3Code}`)}>
+        <div className={`menu-item ${theme}`} onClick={() => history.push(`${match.url}country?code=${country.alpha3Code}`)}>
             <div className='background-image' style={{backgroundImage: `url(${country.flags.png})`}}/>
             <div className='content'>
                 <h2 className='country-name'>{country.name}</h2>

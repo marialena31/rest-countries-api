@@ -30,7 +30,7 @@ const Country = ({country}) => {
         } else {
             setIsLoaded(true);
         }
-    }, [])
+    }, [country])
 
     if (error) {
         return <div>Erreur : {error.message}</div>;

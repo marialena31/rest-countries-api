@@ -12,11 +12,10 @@ html {
 }
 
 body {
-    background-color: $very-light;
     font-family: $font-primary;
     font-weight: $font-weight-medium;
     font-size: $font-size-homepage;
-    color: $very-dark-text;
+    
 }
 
 ul {
@@ -25,5 +24,5 @@ ul {
 
 a {
   text-decoration: none;
-  color: $very-dark-text;
+  color: var(--color-text);
 }

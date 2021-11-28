@@ -1,37 +1,30 @@
 @import '../../sass/variables';
 
 .header {
-    background-color: $white;
+    background-color: var(--color-elements);
     box-shadow: $light-shadow;
     padding: 2rem 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp-medium) {
         padding-left: 2rem;
         padding-right: 2rem;
         padding-top: 3rem;
+     }
+
+     @media only screen and (max-width: $bp-small) {
         font-size: 70%;
      }
 
-     &__change-mode {
-         cursor: pointer;
-
-         & .dark ~ .header {
-            background-color: $dark-blue;
-         }
-
-         & .dark ~ .body {
-            background-color: $very-dark-background;
-         }
-         &__title {
-              cursor: pointer;
-         }
-     }
-
-    &__change-mode__icon {
+    &__change-mode {
         cursor: pointer;
-        padding-right: 0.5rem;
+
+        &__icon {
+            padding-right: 0.5rem;
+            vertical-align: middle;
+            font-size: 150%;
+        }
     }
 }

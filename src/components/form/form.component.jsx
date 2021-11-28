@@ -1,58 +1,29 @@
-import React, {useState} from "react";
+import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import regions from '../../Datas/data';
 
 import './form.styles.scss';
 
-const Form = () => {
-    const regions = [
-        {
-            'code': 'africa',
-            'name': 'Africa'
-        },
-        {
-            'code': 'america',
-            'name': 'America'
-        },
-        {
-            'code': 'asia',
-            'name': 'Asia'
-        },
-        {
-            'code': 'europe',
-            'name': 'Europe'
-        },
-        {
-            'code': 'oceania',
-            'name': 'Oceania'
-        }
-    ];
-
-    const [searchValue, setSearchValue] = useState('');
-    const [filterValue, setFilterValue] = useState('');
-
+const Form = ({theme, searchValue, setSearchValue, filterValue, setFilterValue}) => {
     const handleChangeSearchValue = (event) => {
         setSearchValue(event.target.value)
+        setFilterValue('')
     }
 
     const handleChangeFilterValue = (event) => {
         setFilterValue(event.target.value)
+        setSearchValue('')
     }
 
-    const handleSubmit = (event) => {
-        alert(searchValue + filterValue);
-        event.preventDefault();
-    } 
-    
-
     return (
-        <form className='search-form' onSubmit={handleSubmit} >
+        <form className='search-form' >
             <div className="search-form__search-icon">
-                <input name="input-search" className="search-form__input-search" type="text" onChange={handleChangeSearchValue} value={searchValue} placeholder="Search for a country..."></input>               
-                <input className="search-form__search-icon__btn" type="submit" onClick={handleSubmit}/>
+                <input name="input-search" className={`search-form__input-search ${theme}`} type="text" onChange={handleChangeSearchValue} value={searchValue} placeholder="Search for a country..."></input>               
+                <input className="search-form__search-icon__btn" type="submit"/>
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='icon search-form__search-icon__glass'/>
             </div>
-            <select className="search-form__select-region" value={filterValue} onChange={handleChangeFilterValue} required>
+            <select className={`search-form__select-region ${theme}`} value={filterValue} onChange={handleChangeFilterValue} required>
                 <option key="default" value="" disabled="disabled" hidden="hidden">Filter by Region </option>
                 {regions.map(region => (<option key={region.code} value={region.code}>{region.name}</option>))}
             </select>
